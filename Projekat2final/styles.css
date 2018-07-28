@@ -1,0 +1,82 @@
+html {
+	color: rgba(0, 0, 0, .8);
+	font-family: Verdana;
+}
+.wrapper {
+	max-width: 768px;
+	margin: 5em auto 0 auto;
+	border: 2px solid silver;
+	box-shadow: 3px 3px silver;
+}
+.card1 {
+	padding: 24px;
+	border-radius: 0 5px;
+}
+.card2 {
+	border-top: 1px solid rgba(160, 160, 160, 0.3);
+	position: relative;
+	padding: 16px 24px;
+}
+.naslov {
+	line-height: 32px;
+	margin-bottom: 8px;
+	font-size: 24px;
+	font-weight: 300;
+}
+.input-polje {
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	height: 3em;
+}
+.btn {
+	font-size: 16px;
+	border: none;
+	border-radius: 2px;
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 16px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	-webkit-tap-highlight-color: transparent;
+	background-color: #009973;
+	color: #fff;
+}
+.btn:hover {
+	opacity: .8;
+}
+#task-title {
+	font-size: 24px;
+}
+.lista-zadataka {
+	margin: .5em 0 1em 0;
+	border: 1px solid #f5f5f5;
+	border-radius: 2px;
+	overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	position: relative;
+}
+.izbrisi-zadatke {
+	background-color: #000;
+	text-decoration: none;
+}
+input[type=text] {
+	border: none;
+	border-bottom: 1px solid silver;
+}
+input[placeholder]{
+	font-size: 20px;
+	font-weight: 100;
+}
+.fa {
+	font-size: 20px;
+	display: inline-block;
+	color: orange;
+	position: absolute;
+	right: 0;
+}
+.fa:hover {
+	color: red;
+}

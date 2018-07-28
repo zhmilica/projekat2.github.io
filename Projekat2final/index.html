@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task List</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!--css style-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="card1">
+		<h2 class="naslov">Task List</h2>
+
+		<form id="forma">
+			<div class="input-polje">
+				<input type="text" name="task" id="zadatak" placeholder="Add New Task Here" size="50">
+				<label for="task"></label>
+			</div>
+			<input type="submit" value="Add Task" class="btn">
+		
+		</form>
+	</div>
+
+	<div class="card2">
+		<h5 id="task-title">Tasks</h5>
+		<div class="input-polje">
+			<input type="text" name="filter" id="filter" placeholder="Filter" size="50">
+			<label for="filter"></label>
+		</div>
+			<ul class="lista-zadataka" id="items">
+				
+			</ul>
+
+		<a href="#" class="izbrisi-zadatke btn" id="clear">Clear Tasks</a>
+	</div>
+</div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
