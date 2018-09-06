@@ -1,3 +1,8 @@
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", kreiramoZadatke); //sami dogadjaji su vezani za document, pa povezujemo ovaj osluskivac
  
 function kreiramoZadatke(){
@@ -20,8 +25,7 @@ function kreiramoZadatke(){
 
 let unosZadatka = document.querySelector("#zadatak");
 let form = document.querySelector("#forma");
-form.addEventListener("submit", dodajZadatak);
-function dodajZadatak(e){
+form.addEventListener("submit", function dodajZadatak(e) {
 	e.preventDefault() //prevencija da se forma submituje nakon klika na  dugme ako --> nismo uneli nista u polje
 	if(unosZadatka.value === ''){
 		alert("You must add new task!") // --  nismo uneli ništa u polje
@@ -34,29 +38,29 @@ function dodajZadatak(e){
 	li.appendChild(link);
 	listaZadataka.appendChild(li);
 	dodajUStorage(unosZadatka.value);
-}
-
+});
+	
 
 let listaZadataka = document.querySelector(".lista-zadataka"); //ovde se sakupljaju zadaci koje unosimo 
-listaZadataka.addEventListener("click", brisiZadatak);
-function brisiZadatak(e){
+listaZadataka.addEventListener("click", function brisiZadatak(e){
 	if(e.target.classList.contains('fa-minus-circle')){
 		if(confirm('Do you want to delete task?')){
 			e.target.parentElement.parentElement.remove();
 			brisiSveIzStorage(e.target.parentElement.parentElement); //brisanje iz localStorage
 		}
 	}
-}
+});
 
 let dugmeIzbrisi = document.querySelector(".izbrisi-zadatke");
-dugmeIzbrisi.addEventListener("click", brisiSveZadatke);
-function brisiSveZadatke(e){
+dugmeIzbrisi.addEventListener("click", function brisiSveZadatke(e) {
 	if(confirm('Do you want to delete all tasks?'));
 	while(listaZadataka.firstChild){
 		listaZadataka.removeChild(listaZadataka.firstChild);
 	}
 	brisiSveIzStorage();
-}
+});
+
+	
 function brisiSveIzStorage(){
 	localStorage.clear();
 }
@@ -87,9 +91,8 @@ function brisiSveIzStorage(y){ //brisanje iz Local Storage
 }
 
 let filter = document.querySelector("#filter");
-filter.addEventListener("keyup", pretragaZadataka);
-function pretragaZadataka(e){ //Filtriranje zadataka
-	let n = e.target.value.toLowerCase();
+filter.addEventListener("keyup", function pretragaZadataka(e){ //filtriranje zadataka
+let n = e.target.value.toLowerCase();
 	let items = listaZadataka.getElementsByTagName("li");
 	Array.from(items).forEach( function(element) {
 		let x = element.firstChild.textContent;
@@ -99,12 +102,7 @@ function pretragaZadataka(e){ //Filtriranje zadataka
 			element.style.display = "none";
 		}
 	})
-}
-
-
-
-
-
+});
 
 
 
