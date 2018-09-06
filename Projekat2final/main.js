@@ -1,8 +1,4 @@
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", kreiramoZadatke); //sami dogadjaji su vezani za document, pa povezujemo ovaj osluskivac
  
 function kreiramoZadatke(){
